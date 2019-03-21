@@ -1,0 +1,26 @@
+# /etc/conf.d/cnscd: config file for /etc/init.d/cnscd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cnsc/cnsc.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cnscd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cnscd.pid"
+
+# Where to write cnscd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cnscd"
+
+# User and group to own cnscd process
+#BITCOIND_USER="cnsc"
+#BITCOIND_GROUP="cnsc"
+
+# Path to cnscd executable
+#BITCOIND_BIN="/usr/bin/cnscd"
+
+# Nice value to run cnscd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

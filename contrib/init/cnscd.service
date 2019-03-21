@@ -1,0 +1,26 @@
+[Unit]
+Description=CNSC's distributed currency daemon
+After=network.target
+
+[Service]
+User=cnsc
+Group=cnsc
+
+Type=forking
+PIDFile=/var/lib/cnscd/cnscd.pid
+
+ExecStart=/usr/bin/cnscd -daemon -pid=/var/lib/cnscd/cnscd.pid \
+          -conf=/etc/cnsc/cnsc.conf -datadir=/var/lib/cnscd
+
+ExecStop=-/usr/bin/cnsc-cli -conf=/etc/cnsc/cnsc.conf \
+         -datadir=/var/lib/cnscd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

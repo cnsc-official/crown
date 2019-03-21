@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CNSC
+Comment=CNSC P2P Cryptocurrency
+Comment[fr]=CNSC, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=CNSC, eşten eşe kriptografik sanal para birimi
+Exec=cnsc-qt %u
+Terminal=false
+Type=Application
+Icon=cnsc128
+MimeType=x-scheme-handler/cnsc;
+Categories=Office;Finance;
